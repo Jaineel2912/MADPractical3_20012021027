@@ -3,6 +3,7 @@ package com.example.madpractical3_20012021027
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import androidx.core.view.WindowCompat
 import com.example.madpractical3_20012021027.databinding.ActivityLoginBinding
 import com.example.madpractical3_20012021027.databinding.ActivityMainBinding
@@ -18,15 +19,19 @@ class LoginActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        binding.BottomNavigationView.id = R.id.bottom_nav_reg
-        binding.BottomNavigationView.setOnItemSelectedListener { it2 ->
-            when (it2.itemId) {
+        binding.textview3.setOnClickListener{
+            Intent(this, RegistrationActivity::class.java).also { startActivity(it) }
+            binding.textview3.movementMethod= LinkMovementMethod.getInstance();
+        }
+
+        binding.bottomnavigationview.selectedItemId = R.id.bottom_nav_login
+        binding.bottomnavigationview.setOnItemSelectedListener{ it ->
+            when(it.itemId){
                 R.id.bottom_nav_reg -> {
-                    Intent(this, RegistrationActivity::class.java).also { startActivity(it) }
+                    Intent(this, RegistrationActivity::class.java).also {startActivity(it)}
                 }
             }
             return@setOnItemSelectedListener true
         }
     }
 }
-
