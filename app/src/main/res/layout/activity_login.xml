@@ -57,17 +57,17 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="172dp">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textlayoutemail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:hint="Email"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:hint="Email">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
@@ -81,32 +81,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp"
-                        app:layout_constraintTop_toBottomOf="@id/textlayoutemail"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:hint="Password"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:hint="Password">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textlayoutemail">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableEnd="@drawable/ic_baseline_password_24"/>
+                            android:drawableEnd="@drawable/ic_baseline_password_24" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
+                        android:id="@+id/textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Forgot Password?"
-                        android:id="@+id/textview"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="20dp"
+                        android:text="Forgot Password?"
                         app:layout_constraintEnd_toEndOf="@id/textlayoutpassword"
-                        app:layout_constraintTop_toBottomOf="@id/textlayoutpassword"/>
+                        app:layout_constraintTop_toBottomOf="@id/textlayoutpassword" />
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        app:layout_constraintTop_toBottomOf="@id/textview"/>
+                        app:layout_constraintTop_toBottomOf="@id/textview" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -144,12 +144,12 @@
                 <TextView
                     android:id="@+id/textview2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="23dp"
+                    android:text="Don't have an account"
                     android:textSize="17dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/textview3"
-                    android:text="Don't have an account"/>
+                    app:layout_constraintStart_toStartOf="parent" />
 
 
 
